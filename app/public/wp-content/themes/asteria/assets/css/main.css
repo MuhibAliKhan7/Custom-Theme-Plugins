@@ -1,0 +1,701 @@
+
+/* ==========================================
+   ASTERIA — PREMIUM AGENCY THEME
+   Version 1.1
+========================================== */
+
+:root {
+    --as-dark: #101022;
+    --as-dark-2: #17162d;
+    --as-purple: #8062f3;
+    --as-lavender: #aa92ff;
+    --as-white: #fff;
+    --as-muted: #aaa6c2;
+    --as-border: rgba(255,255,255,.11);
+    --as-width: 1280px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--as-dark);
+    color: #fff;
+    font-family: Inter, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body a {
+    transition: color .2s ease, background .2s ease;
+}
+
+body a:focus-visible,
+body button:focus-visible {
+    outline: 3px solid #c4b6ff;
+    outline-offset: 4px;
+}
+
+.asteria-section {
+    scroll-margin-top: 110px;
+}
+
+.asteria-section > .wp-block-group,
+.asteria-footer-inner {
+    max-width: var(--as-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.asteria-section-title,
+.asteria-hero-title,
+.asteria-contact-title {
+    letter-spacing: -.055em;
+}
+
+.asteria-section-title em,
+.asteria-hero-title em,
+.asteria-contact-title em {
+    color: var(--as-lavender);
+    font-style: normal;
+}
+
+/* HEADER */
+
+.asteria-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(16,16,34,.94);
+    border-bottom: 1px solid var(--as-border);
+    backdrop-filter: blur(15px);
+}
+
+body.admin-bar .asteria-header {
+    top: 32px;
+}
+
+.asteria-header-inner {
+    min-height: 86px;
+    padding: 12px 32px;
+}
+
+.asteria-logo {
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: -.06em;
+}
+
+.asteria-logo a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+.asteria-navigation {
+    font-size: 13px;
+    font-weight: 550;
+}
+
+.asteria-navigation .wp-block-navigation-item__content {
+    color: #ddd9ed !important;
+}
+
+.asteria-navigation .wp-block-navigation-item__content:hover {
+    color: #b5a4ff !important;
+}
+
+/* HERO */
+
+.asteria-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 105px 28px 95px;
+    background:
+        radial-gradient(
+            ellipse at 50% 35%,
+            rgba(111,78,232,.2),
+            transparent 55%
+        ),
+        radial-gradient(
+            ellipse at 90% 70%,
+            rgba(78,45,170,.13),
+            transparent 45%
+        ),
+        #101022;
+}
+
+.asteria-hero::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    left: 50%;
+    top: -250px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: #5d46d0;
+    opacity: .10;
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+.asteria-hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1050px;
+    margin: 0 auto 80px;
+}
+
+.asteria-eyebrow {
+    display: table;
+    margin: 0 auto 32px;
+    border: 1px solid rgba(169,145,255,.26);
+    border-radius: 100px;
+    padding: 10px 21px;
+    font-size: 11px;
+    color: #c7b7ff;
+    letter-spacing: 1.5px;
+    background: rgba(142,112,255,.07);
+}
+
+.asteria-hero-title {
+    max-width: 1020px;
+    margin: 0 auto 27px;
+    color: #fff;
+    font-size: clamp(46px, 6.2vw, 99px);
+    line-height: 1.06;
+    font-weight: 680;
+}
+
+.asteria-hero-description {
+    max-width: 620px;
+    margin: 0 auto 34px;
+    color: #aaa8c4;
+    font-size: clamp(15px, 1.5vw, 18px);
+    line-height: 1.8;
+}
+
+.asteria-hero-buttons {
+    gap: 13px;
+}
+
+.asteria-primary-button .wp-block-button__link {
+    border: 1px solid #886bff;
+    background: linear-gradient(120deg,#7758e8,#9c70fb);
+    color: #fff;
+    padding: 16px 28px;
+    font-size: 13px;
+    box-shadow: 0 12px 35px rgba(110,78,223,.22);
+}
+
+.asteria-primary-button .wp-block-button__link:hover {
+    background: #a78afc;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.asteria-outline-button .wp-block-button__link {
+    color: #fff;
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.26);
+    padding: 16px 27px;
+    font-size: 13px;
+}
+
+.asteria-outline-button .wp-block-button__link:hover {
+    background: rgba(255,255,255,.08);
+    color: #fff;
+}
+
+/* HERO MOCK WEBSITE */
+
+.asteria-showcase {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid rgba(171,141,255,.25);
+    background: linear-gradient(
+        130deg,
+        rgba(141,111,254,.29),
+        rgba(55,37,110,.15)
+    );
+    box-shadow: 0 40px 100px rgba(0,0,0,.35);
+}
+
+.asteria-browser {
+    overflow: hidden;
+    border-radius: 17px;
+    background: #f4efff;
+    color: #261949;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.5);
+}
+
+.asteria-browser-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid rgba(73,44,140,.1);
+    background: #fff;
+}
+
+.asteria-browser-top p {
+    margin: 0;
+    font-size: 10px;
+    color: #968cae;
+}
+
+.asteria-browser-top p:first-child {
+    color: #f19b9c;
+    letter-spacing: 4px;
+}
+
+.asteria-browser-content {
+    position: relative;
+    min-height: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 55px 24px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 50% 130%, #9d80f5, transparent 53%),
+        linear-gradient(140deg, #f8f5ff 0%, #e8ddff 100%);
+}
+
+.asteria-browser-content::before,
+.asteria-browser-content::after {
+    content: "";
+    position: absolute;
+    border: 1px solid rgba(99,67,190,.16);
+    border-radius: 50%;
+    width: 550px;
+    height: 550px;
+    pointer-events: none;
+}
+
+.asteria-browser-content::before {
+    left: -250px;
+    top: -310px;
+}
+
+.asteria-browser-content::after {
+    right: -260px;
+    bottom: -350px;
+}
+
+.asteria-browser-label {
+    position: relative;
+    z-index: 1;
+    color: #7e6aa9;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.asteria-browser-title {
+    position: relative;
+    z-index: 1;
+    margin: 15px 0;
+    color: #2b2050;
+    font-size: clamp(36px, 6vw, 75px);
+    line-height: 1.07;
+    letter-spacing: -.065em;
+}
+
+.asteria-browser-content > p:last-child {
+    position: relative;
+    z-index: 1;
+    color: #72688a;
+    font-size: 13px;
+}
+
+/* SHARED SECTIONS */
+
+.asteria-section {
+    padding: 120px 32px;
+}
+
+.asteria-section-label {
+    margin: 0 0 23px;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 750;
+    color: #a993ff;
+}
+
+.asteria-section-title {
+    max-width: 820px;
+    margin: 0 0 27px;
+    font-size: clamp(38px, 5vw, 72px);
+    font-weight: 650;
+    line-height: 1.1;
+    color: #fff;
+}
+
+.asteria-section-intro {
+    max-width: 570px;
+    margin: 0 0 50px;
+    color: #a6a4bd;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* SERVICES */
+
+.asteria-services {
+    background: #17162b;
+}
+
+.asteria-service-grid {
+    gap: 19px;
+}
+
+.asteria-service-card {
+    min-height: 330px;
+    padding: 34px 28px;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 20px;
+    background: linear-gradient(155deg,#23203a,#1b1a30);
+    transition: transform .25s, border-color .25s;
+}
+
+.asteria-service-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(166,133,255,.5);
+}
+
+.asteria-service-number {
+    margin-bottom: 68px;
+    color: #a892ff;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.asteria-service-card h3 {
+    font-size: 24px;
+    letter-spacing: -.035em;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.asteria-service-card p:not(.asteria-service-number) {
+    color: #aba9c2;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.asteria-service-card .asteria-card-link {
+    margin-top: 24px;
+    color: #c6b7ff !important;
+    font-weight: 650;
+}
+
+/* WORK */
+
+.asteria-work {
+    background: #101022;
+}
+
+.asteria-work-grid {
+    gap: 28px;
+}
+
+.asteria-project {
+    min-height: 390px;
+    border-radius: 19px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform .25s;
+}
+
+.asteria-project:hover {
+    transform: translateY(-5px);
+}
+
+.asteria-project-one {
+    color: #2e1e63;
+    background:
+        radial-gradient(circle at 50% 110%,#9275e8,transparent 55%),
+        linear-gradient(125deg,#efe7ff,#d8c9ff);
+}
+
+.asteria-project-two {
+    color: #e5f8f2;
+    background:
+        radial-gradient(circle at 65% 125%,#24887e,transparent 65%),
+        linear-gradient(135deg,#132c32,#1a5155);
+}
+
+.asteria-project-kicker {
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2px;
+    opacity: .75;
+}
+
+.asteria-project h3 {
+    color: inherit;
+    font-size: clamp(58px, 8vw, 104px);
+    font-weight: 750;
+    letter-spacing: -.08em;
+    margin: 17px 0 5px;
+}
+
+.asteria-project > p:last-child {
+    color: inherit;
+    font-size: 15px;
+}
+
+.asteria-project-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 19px 0;
+}
+
+/* PROCESS */
+
+.asteria-about {
+    background: #19182d;
+}
+
+.asteria-process-grid {
+    gap: 35px;
+    margin-top: 65px;
+}
+
+.asteria-process-grid > .wp-block-column {
+    border-top: 1px solid #51496f;
+    padding-top: 27px;
+}
+
+.asteria-process-grid h3 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.asteria-process-grid p {
+    color: #aaa8c1;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+/* CONTACT */
+
+.asteria-contact {
+    background:
+        radial-gradient(
+            ellipse at 50% 90%,
+            rgba(123,85,235,.25),
+            transparent 60%
+        ),
+        #111024;
+    text-align: center;
+    padding: 135px 28px;
+}
+
+.asteria-contact-inner {
+    max-width: 950px;
+    margin: auto;
+}
+
+.asteria-contact-title {
+    max-width: 900px;
+    margin: 0 auto 24px;
+    color: #fff;
+    font-size: clamp(42px, 6vw, 80px);
+}
+
+.asteria-contact-inner > p {
+    color: #aaa6c4;
+    margin-bottom: 33px;
+}
+
+/* FOOTER */
+
+.asteria-footer {
+    padding: 75px 32px 25px;
+    background: #0b0b19;
+    border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.asteria-footer-columns {
+    gap: 45px;
+    margin-bottom: 75px;
+}
+
+.asteria-footer h3 {
+    font-size: 32px;
+    letter-spacing: -.06em;
+    color: #fff;
+}
+
+.asteria-footer h4 {
+    font-size: 13px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.asteria-footer p {
+    color: #8e8da8;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.asteria-footer a {
+    color: #aaa3d8;
+}
+
+.asteria-footer a:hover {
+    color: #fff;
+}
+
+.asteria-footer-bottom {
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding-top: 24px;
+}
+
+.asteria-footer-bottom p {
+    font-size: 11px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .asteria-hero {
+        padding: 80px 20px 65px;
+    }
+
+    .asteria-section {
+        padding: 85px 24px;
+    }
+
+    .asteria-service-grid,
+    .asteria-work-grid,
+    .asteria-process-grid {
+        flex-wrap: wrap !important;
+    }
+
+    .asteria-service-grid > .wp-block-column,
+    .asteria-work-grid > .wp-block-column {
+        flex-basis: 100% !important;
+    }
+
+    .asteria-service-card {
+        min-height: 260px;
+    }
+
+    .asteria-service-number {
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 782px) {
+    body.admin-bar .asteria-header {
+        top: 46px;
+    }
+}
+
+@media (max-width: 600px) {
+    .asteria-header-inner {
+        min-height: 70px;
+        padding: 13px 20px;
+    }
+
+    .asteria-logo {
+        font-size: 24px;
+    }
+
+    .asteria-hero {
+        padding: 72px 18px 50px;
+    }
+
+    .asteria-hero-title {
+        font-size: clamp(42px, 11vw, 65px);
+    }
+
+    .asteria-hero-description {
+        font-size: 14px;
+    }
+
+    .asteria-hero-buttons {
+        flex-direction: column;
+        align-items: stretch !important;
+    }
+
+    .asteria-hero-buttons .wp-block-button {
+        width: 100%;
+    }
+
+    .asteria-hero-buttons .wp-block-button__link {
+        width: 100%;
+    }
+
+    .asteria-showcase {
+        padding: 6px;
+        border-radius: 16px;
+    }
+
+    .asteria-browser-content {
+        min-height: 280px;
+        padding: 30px 15px;
+    }
+
+    .asteria-browser-title {
+        font-size: 40px;
+    }
+
+    .asteria-browser-label {
+        font-size: 9px;
+    }
+
+    .asteria-section {
+        padding: 75px 18px;
+    }
+
+    .asteria-section-title {
+        font-size: 43px;
+    }
+
+    .asteria-project {
+        min-height: 280px;
+    }
+
+    .asteria-footer {
+        padding: 60px 20px 20px;
+    }
+
+    .asteria-footer-columns {
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+
+    .asteria-footer-bottom {
+        display: block !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .asteria-service-card,
+    .asteria-project,
+    body a {
+        transition: none;
+    }
+}

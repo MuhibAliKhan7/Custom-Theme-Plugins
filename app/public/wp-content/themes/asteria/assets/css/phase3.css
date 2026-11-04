@@ -1,0 +1,244 @@
+
+/* =========================================
+   ASTERIA PHASE 3 — REUSABLE COMPONENTS
+========================================= */
+
+:root {
+    --as3-bg: #101022;
+    --as3-panel: #211e39;
+    --as3-purple: #8062f3;
+    --as3-accent: #b39bff;
+    --as3-muted: #b2adc8;
+}
+
+/* REUSABLE HERO */
+
+.as3-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: clamp(85px, 11vw, 160px) 24px;
+    background:
+        radial-gradient(
+            ellipse at 50% 95%,
+            rgba(132, 93, 243, .35),
+            transparent 60%
+        ),
+        linear-gradient(135deg, #111022, #21163d);
+}
+
+.as3-hero::before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    background: rgba(131, 92, 255, .22);
+    border-radius: 50%;
+    filter: blur(110px);
+    left: 50%;
+    top: -220px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.as3-hero-content {
+    max-width: 980px;
+    margin-inline: auto;
+}
+
+.as3-eyebrow {
+    color: #beaaff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.as3-hero-heading {
+    color: #fff;
+    font-size: clamp(43px, 6.5vw, 90px);
+    font-weight: 700;
+    letter-spacing: -.06em;
+    line-height: 1.08;
+    margin: 20px 0;
+}
+
+.as3-hero-heading em,
+.as3-cta-heading em {
+    color: var(--as3-accent);
+    font-style: normal;
+}
+
+.as3-hero-copy {
+    max-width: 600px;
+    margin: 0 auto 32px;
+    color: var(--as3-muted);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* SERVICES PATTERN */
+
+.as3-services-section {
+    padding: 110px 30px;
+    background: #17162b;
+}
+
+.as3-services-grid {
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.as3-service-card {
+    height: 100%;
+    min-height: 285px;
+    padding: 32px;
+    border: 1px solid rgba(255,255,255,.11);
+    border-radius: 20px;
+    background: linear-gradient(
+        145deg,
+        #292440,
+        #1d1b32
+    );
+    transition: transform .25s, border-color .25s;
+}
+
+.as3-service-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(177,153,255,.55);
+}
+
+.as3-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 53px;
+    height: 53px;
+    border-radius: 14px;
+    background: rgba(130,99,243,.16);
+    color: #b4a0ff;
+    font-size: 27px;
+    margin: 0 0 45px;
+}
+
+.as3-service-card h3 {
+    color: #fff;
+    font-size: 23px;
+    letter-spacing: -.035em;
+}
+
+.as3-service-card p:not(.as3-card-icon) {
+    color: #b0aac5;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* CTA PATTERN */
+
+.as3-cta {
+    padding: 110px 24px;
+    text-align: center;
+    background:
+        radial-gradient(
+            ellipse at 50% 100%,
+            rgba(153,98,255,.35),
+            transparent 58%
+        ),
+        #111025;
+}
+
+.as3-cta-heading {
+    max-width: 850px;
+    margin: 22px auto;
+    font-size: clamp(40px, 6vw, 78px);
+    line-height: 1.1;
+    letter-spacing: -.06em;
+    color: #fff;
+}
+
+.as3-cta-copy {
+    max-width: 550px;
+    margin: 0 auto 32px;
+    color: var(--as3-muted);
+}
+
+/* INNER PAGE TEMPLATE */
+
+.as3-page {
+    min-height: 65vh;
+    background: var(--as3-bg);
+}
+
+.as3-page-banner {
+    padding: 90px 30px;
+    background:
+        radial-gradient(
+            ellipse at 80% 50%,
+            rgba(127,90,245,.23),
+            transparent 55%
+        ),
+        #171429;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.as3-page-title {
+    font-size: clamp(45px, 6vw, 82px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -.055em;
+    color: white;
+    margin: 15px 0 0;
+}
+
+.as3-page-content {
+    padding: 75px 25px 110px;
+    color: #eeeaf8;
+}
+
+.as3-page-content p {
+    line-height: 1.85;
+}
+
+.as3-page-content a {
+    color: #b49fff;
+}
+
+/* EDITOR / MOBILE IMPROVEMENTS */
+
+@media (max-width: 781px) {
+    .as3-services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .as3-services-grid > .wp-block-column {
+        width: 100%;
+    }
+
+    .as3-service-card {
+        min-height: 230px;
+    }
+
+    .as3-card-icon {
+        margin-bottom: 25px;
+    }
+
+    .as3-services-section,
+    .as3-cta {
+        padding: 75px 20px;
+    }
+
+    .as3-page-banner {
+        padding: 70px 22px;
+    }
+
+    .as3-page-content {
+        padding: 50px 20px 80px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .as3-service-card {
+        transition: none;
+    }
+}

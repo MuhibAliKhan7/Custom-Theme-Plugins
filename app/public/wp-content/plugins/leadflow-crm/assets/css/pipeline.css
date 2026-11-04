@@ -1,0 +1,384 @@
+
+/* ==========================================
+   LEADFLOW CRM - PHASE 5 KANBAN
+========================================== */
+
+.wplf-pipeline-app {
+    --pipeline-purple: #7058e9;
+}
+
+/* BANNER */
+
+.wplf-pipeline-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 36px;
+    margin-bottom: 22px;
+    border-radius: 18px;
+    overflow: hidden;
+    color: #fff;
+    background: linear-gradient(
+        115deg, #5146ce, #8061ec, #ac72f2
+    );
+}
+
+.wplf-pipeline-banner h2 {
+    color: #fff;
+    font-size: 25px;
+    margin: 12px 0;
+}
+
+.wplf-pipeline-banner p {
+    color: #eeeaff;
+    font-size: 13px;
+    margin: 0;
+}
+
+.wplf-pipeline-banner > div > span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.wplf-pipeline-banner > .dashicons {
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    color: rgba(255,255,255,.65);
+}
+
+/* SUMMARY */
+
+.wplf-pipeline-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.wplf-pipeline-metric {
+    padding: 23px;
+    border-radius: 14px;
+    background: #fff;
+    border: 1px solid #e9eaf4;
+    box-shadow: 0 6px 18px rgba(30,36,74,.035);
+}
+
+.wplf-pipeline-metric span {
+    display: block;
+    color: #8792a9;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.wplf-pipeline-metric strong {
+    display: block;
+    font-size: 29px;
+    color: #252947;
+}
+
+/* KANBAN BOARD */
+
+.wplf-kanban-board {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(230px,1fr));
+    gap: 15px;
+    overflow-x: auto;
+    padding: 4px 2px 22px;
+    align-items: stretch;
+}
+
+.wplf-kanban-column {
+    display: flex;
+    flex-direction: column;
+    min-width: 230px;
+    border: 1px solid #e6e8f3;
+    border-radius: 16px;
+    background: #f9f9fe;
+    overflow: hidden;
+}
+
+.wplf-kanban-column-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 17px 14px;
+    border-bottom: 1px solid #eceef6;
+}
+
+.wplf-column-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wplf-column-heading h2 {
+    font-size: 13px;
+    font-weight: 750;
+    color: #29304b;
+    margin: 0;
+}
+
+.wplf-stage-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.wplf-stage-count {
+    min-width: 26px;
+    text-align: center;
+    background: #ebeaf7;
+    color: #6f6797;
+    padding: 5px 7px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.wplf-kanban-dropzone {
+    flex: 1;
+    min-height: 210px;
+    padding: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    transition: background .2s, outline-color .2s;
+}
+
+.wplf-kanban-dropzone.drag-over {
+    background: #eeeaff;
+    outline: 2px dashed #8a75ec;
+    outline-offset: -6px;
+    border-radius: 10px;
+}
+
+.wplf-column-footer {
+    color: #a1a8b8;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px dashed #e2e4f0;
+    font-size: 11px;
+}
+
+.wplf-column-footer .dashicons {
+    font-size: 13px;
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+}
+
+/* CARDS */
+
+.wplf-kanban-card {
+    padding: 15px;
+    border: 1px solid #e9eaf3;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 16px rgba(36,40,75,.045);
+    cursor: grab;
+    transition: box-shadow .2s, transform .2s;
+}
+
+.wplf-kanban-card:hover {
+    box-shadow: 0 10px 23px rgba(50,49,95,.10);
+    transform: translateY(-2px);
+}
+
+.wplf-kanban-card:active {
+    cursor: grabbing;
+}
+
+.wplf-kanban-card.is-dragging {
+    opacity: .45;
+}
+
+.wplf-kanban-card.is-saving {
+    opacity: .7;
+    pointer-events: none;
+}
+
+.wplf-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.wplf-card-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+    background: #eeebff;
+    color: #715de8;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.wplf-card-drag {
+    color: #b0b5c6;
+}
+
+.wplf-kanban-card h3 {
+    font-size: 14px;
+    margin: 0 0 5px;
+    color: #242a46;
+    font-weight: 750;
+    overflow-wrap: anywhere;
+}
+
+.wplf-card-company {
+    margin: 0 0 15px;
+    color: #8b96aa;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.wplf-card-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 11px;
+    color: #69758f;
+    margin: 9px 0;
+    overflow-wrap: anywhere;
+}
+
+.wplf-card-detail .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.wplf-card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f6;
+}
+
+.wplf-card-edit {
+    color: #6e59e1;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.wplf-card-id {
+    color: #a3abbb;
+    font-size: 10px;
+}
+
+/* STATUS FORM */
+
+.wplf-card-stage-form {
+    margin-top: 13px;
+    padding-top: 12px;
+    border-top: 1px solid #f0f1f6;
+}
+
+.wplf-card-stage-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 10px;
+    color: #8994a9;
+    font-weight: 600;
+}
+
+.wplf-stage-controls {
+    display: flex;
+    gap: 5px;
+}
+
+.wplf-pipeline-app .wplf-stage-controls select {
+    min-width: 0;
+    width: 100%;
+    font-size: 11px;
+    padding: 4px 5px;
+    border-radius: 7px;
+    border: 1px solid #e5e6f0;
+    min-height: 32px;
+}
+
+.wplf-stage-controls button {
+    border: 0;
+    border-radius: 7px;
+    padding: 6px 9px;
+    color: white;
+    background: #745ee9;
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.wplf-stage-controls button:hover {
+    background: #5846d1;
+}
+
+/* STATUS MESSAGE */
+
+.wplf-pipeline-message {
+    display: none;
+    background: #e3f8ee;
+    border-radius: 10px;
+    color: #13835c;
+    padding: 12px 18px;
+    margin-bottom: 18px;
+    font-size: 13px;
+}
+
+.wplf-pipeline-message.is-visible {
+    display: block;
+}
+
+.wplf-pipeline-message.is-error {
+    background: #ffeaed;
+    color: #bf3754;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+    .wplf-pipeline-summary {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .wplf-pipeline-banner {
+        padding: 25px 20px;
+    }
+
+    .wplf-pipeline-banner h2 {
+        font-size: 21px;
+    }
+
+    .wplf-pipeline-banner > .dashicons {
+        display: none;
+    }
+
+    .wplf-pipeline-summary {
+        gap: 10px;
+    }
+
+    .wplf-pipeline-metric {
+        padding: 17px;
+    }
+
+    .wplf-kanban-board {
+        grid-template-columns: repeat(6, 260px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wplf-kanban-card,
+    .wplf-kanban-dropzone {
+        transition: none;
+    }
+}

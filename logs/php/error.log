@@ -1,0 +1,208 @@
+[27-Oct-2026 15:29:33 UTC] PHP Fatal error:  Uncaught Error: Class "WPLF_Admin" not found in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\leadflow-crm\leadflow-crm.php:40
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): {closure}('')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(523): WP_Hook->do_action(Array)
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-settings.php(630): do_action('plugins_loaded')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-config.php(103): require_once('C:\\Users\\11\\Loc...')
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-load.php(50): require_once('C:\\Users\\11\\Loc...')
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\11\\Loc...')
+#7 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\leadflow-crm\leadflow-crm.php on line 40
+[27-Oct-2026 15:59:21 UTC] PHP Warning:  require_once(C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\leadflow-crm/includes/class-pipeline.php): Failed to open stream: No such file or directory in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\leadflow-crm\leadflow-crm.php on line 24
+[27-Oct-2026 15:59:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\leadflow-crm/includes/class-pipeline.php' (include_path='.:/usr/share/php:/www/wp-content/pear') in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\leadflow-crm\leadflow-crm.php:24
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-settings.php(597): include_once()
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-config.php(103): require_once('C:\\Users\\11\\Loc...')
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-load.php(50): require_once('C:\\Users\\11\\Loc...')
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\11\\Loc...')
+#4 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\leadflow-crm\leadflow-crm.php on line 24
+[27-Oct-2026 16:02:06 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:02:07 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:02:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:03:23 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:03:39 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:03:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('4', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:03:42 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('2', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:04:37 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:04:38 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:04:38 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('4', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[27-Oct-2026 16:04:52 UTC] PHP Fatal error:  Uncaught ArgumentCountError: is_numeric() expects exactly 1 argument, 3 given in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php:948
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php(948): is_numeric('3', Object(WP_REST_Request), 'id')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(1115): WP_REST_Request->has_valid_params()
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-server.php(441): WP_REST_Server->dispatch(Object(WP_REST_Request))
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api.php(488): WP_REST_Server->serve_request('/leadflow/v1/pi...')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): rest_api_loaded(Object(WP))
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters('', Array)
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(571): WP_Hook->do_action(Array)
+#7 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(418): do_action_ref_array('parse_request', Array)
+#8 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp.php(822): WP->parse_request('')
+#9 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\functions.php(1352): WP->main('')
+#10 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-blog-header.php(16): wp()
+#11 C:\Users\11\Local Sites\leadflow-crm\app\public\index.php(17): require('C:\\Users\\11\\Loc...')
+#12 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\rest-api\class-wp-rest-request.php on line 948
+[28-Oct-2026 12:58:13 UTC] PHP Fatal error:  Uncaught Error: Class "FPA_Runs" not found in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\flowpilot-ai\flowpilot-ai.php:49
+Stack trace:
+#0 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(353): {closure}('')
+#1 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\class-wp-hook.php(377): WP_Hook->apply_filters(NULL, Array)
+#2 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-includes\plugin.php(523): WP_Hook->do_action(Array)
+#3 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-settings.php(630): do_action('plugins_loaded')
+#4 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-config.php(103): require_once('C:\\Users\\11\\Loc...')
+#5 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-load.php(50): require_once('C:\\Users\\11\\Loc...')
+#6 C:\Users\11\Local Sites\leadflow-crm\app\public\wp-admin\admin-ajax.php(22): require_once('C:\\Users\\11\\Loc...')
+#7 {main}
+  thrown in C:\Users\11\Local Sites\leadflow-crm\app\public\wp-content\plugins\flowpilot-ai\flowpilot-ai.php on line 49
+[28-Oct-2026 14:43:45 UTC] WordPress database error Table 'local.wp_woocommerce_attribute_taxonomies' doesn't exist for query SELECT * FROM wp_woocommerce_attribute_taxonomies WHERE attribute_name != '' ORDER BY attribute_name ASC; made by activate_plugin, plugin_sandbox_scrape, include_once('/plugins/woocommerce/woocommerce.php'), WC, WooCommerce::instance, WooCommerce->__construct, WooCommerce->init_hooks, Automattic\WooCommerce\Internal\ProductAttributes\VisualAttributeTermAdmin->register, wc_get_attribute_taxonomies

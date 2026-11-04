@@ -1,0 +1,304 @@
+
+/* ASTERIA SECTION LIBRARY — VERSION 1.0 */
+
+.as-section {
+    padding: clamp(72px, 9vw, 125px) 28px;
+    color: #fff;
+}
+
+.as-section > .wp-block-group {
+    max-width: 1280px;
+    margin-inline: auto;
+}
+
+.as-kicker {
+    color: #b49cff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+.as-heading {
+    color: #fff;
+    font-size: clamp(38px, 4.8vw, 68px);
+    letter-spacing: -.055em;
+    line-height: 1.09;
+    font-weight: 700;
+    margin: 20px 0 25px;
+}
+
+.as-heading em {
+    font-style: normal;
+    color: #ad94ff;
+}
+
+.as-description {
+    color: #b4adc7;
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 22px;
+}
+
+.as-button .wp-block-button__link {
+    background: linear-gradient(125deg,#7657e8,#9b70f7);
+    border: 1px solid #987cf4;
+    border-radius: 999px;
+    color: #fff;
+    padding: 15px 28px;
+    font-size: 14px;
+    font-weight: 650;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.as-button .wp-block-button__link:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(118,87,232,.22);
+}
+
+/* ABOUT SECTIONS */
+
+.as-about {
+    background: #151426;
+}
+
+.as-about-alt {
+    background: #1b1731;
+}
+
+.as-split {
+    gap: clamp(30px, 5vw, 90px);
+    align-items: center !important;
+}
+
+.as-split > .wp-block-column {
+    min-width: 0;
+}
+
+.as-copy {
+    max-width: 580px;
+}
+
+.as-media {
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+    background: linear-gradient(135deg,#46317c,#9971e8);
+    min-height: 420px;
+}
+
+.as-about-image {
+    margin: 0;
+    width: 100%;
+}
+
+.as-about-image img {
+    display: block;
+    width: 100%;
+    min-height: 420px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 22px;
+}
+
+/* SERVICES */
+
+.as-services {
+    background: #17162b;
+}
+
+.as-services .as-description {
+    max-width: 620px;
+}
+
+.as-card-grid {
+    gap: 22px;
+    margin-top: 50px;
+}
+
+.as-card-grid > .wp-block-column {
+    min-width: 0;
+}
+
+.as-service-card {
+    min-height: 325px;
+    height: 100%;
+    padding: 34px;
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 20px;
+    background: linear-gradient(145deg,#29243f,#201d35);
+    transition: transform .25s, border-color .25s;
+}
+
+.as-service-card:hover {
+    transform: translateY(-5px);
+    border-color: #7e66df;
+}
+
+.as-card-number {
+    color: #ab96fc;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: 750;
+    margin-bottom: 65px;
+}
+
+.as-service-card h3 {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -.035em;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.as-service-card p:not(.as-card-number) {
+    color: #b5aec9;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* PORTFOLIO */
+
+.as-portfolio {
+    background: #101022;
+}
+
+.as-portfolio-grid {
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.as-project {
+    position: relative;
+    min-height: 390px;
+    padding: 32px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    transition: transform .25s;
+}
+
+.as-project:hover {
+    transform: translateY(-5px);
+}
+
+.as-project-purple {
+    color: #33235e;
+    background: radial-gradient(
+        circle at 50% 120%,
+        #a282ec,
+        transparent 65%
+    ), linear-gradient(135deg,#f0e8ff,#d8c6ff);
+}
+
+.as-project-green {
+    color: #eafff9;
+    background: radial-gradient(
+        circle at 50% 120%,
+        #319f91,
+        transparent 65%
+    ), linear-gradient(135deg,#142e35,#244d51);
+}
+
+.as-project h3 {
+    color: inherit;
+    font-size: clamp(50px,6vw,95px);
+    font-weight: 800;
+    letter-spacing: -.08em;
+    margin: 18px 0 8px;
+}
+
+.as-project p {
+    color: inherit;
+    font-size: 14px;
+}
+
+.as-project .as-project-label {
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2px;
+}
+
+.as-project-title {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* CONTACT */
+
+.as-contact {
+    background:
+        radial-gradient(
+            ellipse at 50% 90%,
+            rgba(140,96,246,.35),
+            transparent 60%
+        ),
+        #151126;
+    text-align: center;
+}
+
+.as-contact-inner {
+    max-width: 900px !important;
+}
+
+.as-contact .as-heading {
+    font-size: clamp(44px,6vw,83px);
+}
+
+.as-contact .as-description {
+    max-width: 580px;
+    margin-inline: auto;
+    margin-bottom: 32px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 781px) {
+    .as-section {
+        padding: 75px 20px;
+    }
+
+    .as-split {
+        flex-direction: column;
+    }
+
+    .as-split > .wp-block-column {
+        width: 100%;
+        flex-basis: 100% !important;
+    }
+
+    .as-about-image img,
+    .as-media {
+        min-height: 300px;
+    }
+
+    .as-card-grid,
+    .as-portfolio-grid {
+        flex-direction: column;
+    }
+
+    .as-service-card {
+        min-height: 250px;
+    }
+
+    .as-card-number {
+        margin-bottom: 30px;
+    }
+
+    .as-project {
+        min-height: 300px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .as-service-card,
+    .as-project,
+    .as-button .wp-block-button__link {
+        transition: none;
+    }
+}

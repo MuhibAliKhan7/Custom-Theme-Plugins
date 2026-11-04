@@ -1,0 +1,112 @@
+
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1280px"
+    },
+    "color": {
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "dark",
+          "name": "Midnight",
+          "color": "#101022"
+        },
+        {
+          "slug": "primary",
+          "name": "Violet",
+          "color": "#8062F3"
+        },
+        {
+          "slug": "lavender",
+          "name": "Lavender",
+          "color": "#A98FFF"
+        },
+        {
+          "slug": "surface",
+          "name": "Surface",
+          "color": "#F7F6FC"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "#FFFFFF"
+        },
+        {
+          "slug": "muted",
+          "name": "Muted",
+          "color": "#A7A3BD"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "name": "Inter",
+          "slug": "body",
+          "fontFamily": "Inter, Arial, sans-serif"
+        },
+        {
+          "name": "System",
+          "slug": "system",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        }
+      ]
+    },
+    "spacing": {
+      "units": ["px", "rem", "%", "vw"],
+      "spacingSizes": [
+        {"slug":"20","name":"Small","size":"12px"},
+        {"slug":"30","name":"Medium","size":"24px"},
+        {"slug":"40","name":"Large","size":"40px"},
+        {"slug":"50","name":"XL","size":"64px"},
+        {"slug":"60","name":"XXL","size":"100px"}
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#101022",
+      "text": "#FFFFFF"
+    },
+    "typography": {
+      "fontFamily": "var:preset|font-family|body",
+      "fontSize": "16px",
+      "lineHeight": "1.6"
+    },
+    "elements": {
+      "heading": {
+        "typography": {
+          "fontWeight": "600",
+          "lineHeight": "1.1"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#A98FFF"
+        }
+      },
+      "button": {
+        "border": {
+          "radius": "999px"
+        },
+        "color": {
+          "background": "#8062F3",
+          "text": "#FFFFFF"
+        },
+        "typography": {
+          "fontWeight": "600"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {"name":"header","title":"Header","area":"header"},
+    {"name":"footer","title":"Footer","area":"footer"}
+  ]
+}

@@ -1,0 +1,451 @@
+
+/* ==========================================
+   FLOWPILOT AI — VISUAL BUILDER v0.2
+========================================== */
+
+.fpa-builder-page {
+    --fpa-bg: #101426;
+    --fpa-panel: #1B2136;
+    --fpa-border: #343D59;
+    --fpa-purple: #8066F2;
+    --fpa-muted: #A4AEC8;
+
+    margin: 0 0 0 -20px;
+    padding: 28px;
+    background: #F3F4FB;
+    min-height: calc(100vh - 80px);
+    box-sizing: border-box;
+}
+
+.fpa-builder-page * {
+    box-sizing: border-box;
+}
+
+.fpa-builder-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.fpa-builder-header h1 {
+    margin: 8px 0;
+    font-size: 30px;
+    font-weight: 750;
+    color: #242944;
+}
+
+.fpa-builder-header p {
+    color: #8490A7;
+    margin: 0;
+}
+
+.fpa-builder-kicker {
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 2px;
+    color: #7661DE;
+}
+
+.fpa-builder-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.fpa-builder-header-actions .button-primary {
+    padding: 8px 20px;
+    border: none;
+    background: linear-gradient(125deg,#6751E5,#9668F3);
+    border-radius: 9px;
+    font-weight: 650;
+}
+
+.fpa-back-button {
+    text-decoration: none;
+    color: #6554D8;
+    font-weight: 650;
+}
+
+.fpa-workflow-picker {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    background: white;
+    padding: 17px 22px;
+    border-radius: 13px;
+    border: 1px solid #E5E8F2;
+    margin-bottom: 18px;
+}
+
+.fpa-workflow-picker label {
+    font-size: 13px;
+    color: #606C88;
+    font-weight: 650;
+}
+
+.fpa-workflow-picker select {
+    min-width: 260px;
+    border-radius: 8px;
+}
+
+/* MAIN APPLICATION */
+
+.fpa-builder-layout {
+    display: grid;
+    grid-template-columns: 225px minmax(0,1fr) 230px;
+    gap: 0;
+    height: 680px;
+    min-height: 500px;
+    overflow: hidden;
+    border: 1px solid #333B55;
+    border-radius: 18px;
+    background: var(--fpa-bg);
+    color: white;
+    box-shadow: 0 20px 45px rgba(39,42,77,.12);
+}
+
+.fpa-node-palette,
+.fpa-inspector {
+    padding: 22px 17px;
+    background: var(--fpa-panel);
+    overflow-y: auto;
+}
+
+.fpa-node-palette {
+    border-right: 1px solid var(--fpa-border);
+}
+
+.fpa-inspector {
+    border-left: 1px solid var(--fpa-border);
+}
+
+.fpa-node-palette h2,
+.fpa-inspector h2 {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0 0 9px;
+}
+
+.fpa-node-palette p,
+.fpa-inspector p {
+    color: var(--fpa-muted);
+    line-height: 1.6;
+    font-size: 12px;
+    margin-bottom: 23px;
+}
+
+.fpa-node-palette > button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    text-align: left;
+    margin: 0 0 10px;
+    padding: 13px 11px;
+    border: 1px solid #3B4561;
+    border-radius: 10px;
+    background: #272F49;
+    color: #EBE9F9;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color .2s, background .2s;
+}
+
+.fpa-node-palette > button:hover,
+.fpa-node-palette > button:focus-visible {
+    border-color: #A18CF8;
+    background: #34345F;
+}
+
+.fpa-node-palette > button span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #3C3B67;
+    color: #C3B4FF;
+    font-size: 17px;
+}
+
+/* CANVAS */
+
+.fpa-canvas-panel {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background: #12172A;
+}
+
+.fpa-canvas-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 15px 18px;
+    border-bottom: 1px solid #303853;
+    background: #1D2439;
+}
+
+.fpa-canvas-toolbar strong {
+    font-size: 13px;
+    color: #E9E9FF;
+}
+
+.fpa-canvas-toolbar > div {
+    display: flex;
+    gap: 8px;
+}
+
+.fpa-canvas-toolbar button {
+    border: 1px solid #454F72;
+    border-radius: 8px;
+    background: #2B3552;
+    padding: 8px 11px;
+    color: #E4E2F8;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.fpa-canvas-toolbar button:hover,
+.fpa-canvas-toolbar button.is-active {
+    border-color: #A18DFC;
+    background: #5947A9;
+}
+
+.fpa-canvas-viewport {
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    background-color: #12172A;
+    background-image:
+        radial-gradient(#343D59 1px, transparent 1px);
+    background-size: 23px 23px;
+    scrollbar-color: #495474 #161B30;
+}
+
+.fpa-canvas {
+    position: relative;
+    width: 1600px;
+    height: 900px;
+    min-height: 100%;
+}
+
+#fpa-edges {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    overflow: visible;
+}
+
+#fpa-nodes {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* DRAGGABLE NODES */
+
+.fpa-graph-node {
+    position: absolute;
+    width: 240px;
+    min-height: 92px;
+    background: #262F49;
+    border: 1px solid #4C587C;
+    border-radius: 13px;
+    padding: 15px 17px;
+    cursor: grab;
+    color: #FFFFFF;
+    box-shadow: 0 12px 28px rgba(0,0,0,.2);
+    user-select: none;
+    touch-action: none;
+    pointer-events: auto;
+}
+
+.fpa-graph-node:active {
+    cursor: grabbing;
+}
+
+.fpa-graph-node.selected {
+    border-color: #B39BFF;
+    box-shadow:
+        0 0 0 3px rgba(139,108,255,.2),
+        0 15px 30px rgba(0,0,0,.25);
+}
+
+.fpa-graph-node:focus-visible {
+    outline: 3px solid #B7A5FF;
+    outline-offset: 3px;
+}
+
+.fpa-graph-tag {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.fpa-graph-node strong {
+    display: block;
+    color: #FFFFFF;
+    font-size: 14px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.fpa-graph-node small {
+    display: block;
+    font-size: 10px;
+    color: #A0ACC7;
+    margin-top: 6px;
+}
+
+.fpa-port {
+    position: absolute;
+    top: 36px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #212942;
+    border-radius: 50%;
+    background: #A38DF8;
+}
+
+.fpa-port-in {
+    left: -7px;
+}
+
+.fpa-port-out {
+    right: -7px;
+}
+
+.fpa-canvas-status {
+    padding: 12px 18px;
+    background: #1D2439;
+    border-top: 1px solid #303853;
+    color: #BDB3F4;
+    font-size: 12px;
+}
+
+.fpa-canvas-status.is-error {
+    color: #FF9BAF;
+}
+
+/* INSPECTOR */
+
+.fpa-inspector label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 12px;
+    color: #C4CBE0;
+    font-weight: 650;
+}
+
+.fpa-inspector input {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid #495270;
+    border-radius: 8px;
+    background: #29324C;
+    color: white;
+    padding: 9px 12px;
+}
+
+.fpa-inspector input:focus {
+    border-color: #A58FFF;
+    box-shadow: 0 0 0 2px rgba(163,143,255,.2);
+}
+
+.fpa-inspector-help {
+    margin-top: 30px;
+    padding: 16px;
+    border: 1px solid #414867;
+    border-radius: 12px;
+    background: #242B44;
+}
+
+.fpa-inspector-help strong {
+    color: #E9E7FF;
+    font-size: 13px;
+}
+
+.fpa-inspector-help p {
+    margin: 10px 0 0;
+}
+
+.fpa-draft-warning {
+    font-size: 12px;
+    color: #7A829B;
+    margin-top: 15px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1150px) {
+    .fpa-builder-layout {
+        grid-template-columns: 185px minmax(0,1fr);
+    }
+
+    .fpa-inspector {
+        grid-column: 1 / -1;
+        border-left: none;
+        border-top: 1px solid var(--fpa-border);
+    }
+}
+
+@media (max-width: 800px) {
+    .fpa-builder-page {
+        margin-left: -10px;
+        padding: 18px 12px;
+    }
+
+    .fpa-builder-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fpa-builder-layout {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .fpa-node-palette {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        max-height: 240px;
+    }
+
+    .fpa-node-palette h2,
+    .fpa-node-palette p {
+        flex-basis: 100%;
+    }
+
+    .fpa-node-palette > button {
+        width: auto;
+    }
+
+    .fpa-canvas-panel {
+        min-height: 520px;
+    }
+
+    .fpa-inspector {
+        min-height: 150px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fpa-node-palette > button {
+        transition: none;
+    }
+}
